@@ -16,6 +16,7 @@ class Wt(CMakePackage):
     git      = "https://github.com/emweb/wt.git"
 
     version('master', branch='master')
+    version('4.0.4', 'ebb8f61b111578984f08f52c58104a2b')
     version('3.3.7', '09858901f2dcf5c3d36a9237daba3e3f')
 
     # wt builds in parallel, but requires more than 5 GByte RAM per -j <njob>
