@@ -107,7 +107,8 @@ class Opencv(CMakePackage):
     depends_on('qt', when='+qt')
     depends_on('java', when='+java')
     depends_on('py-numpy', when='+python', type=('build', 'run'))
-    depends_on('protobuf@3.1.0', when='@3.3.0: +dnn')
+    depends_on('protobuf@3.1.0', when='@3.3.0:3.3.9 +dnn')
+    depends_on('protobuf@3.5.1', when='@3.4.0: +dnn')
 
     depends_on('ffmpeg', when='+videoio')
     depends_on('mpi', when='+videoio')
