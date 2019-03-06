@@ -12,7 +12,10 @@ class Flex(AutotoolsPackage):
 
     homepage = "https://github.com/westes/flex"
     url = "https://github.com/westes/flex/releases/download/v2.6.1/flex-2.6.1.tar.gz"
+    git = "https://github.com/westes/flex.git"
 
+    # adding a number here to meet requirements of other packages
+    version('develop', branch='master')
     version('2.6.4', '2882e3179748cc9f9c23ec593d6adc8d')
     version('2.6.3', 'a5f65570cd9107ec8a8ec88f17b31bb1')
     # Avoid flex '2.6.2' (major bug)
@@ -31,9 +34,9 @@ class Flex(AutotoolsPackage):
     # Older tarballs don't come with a configure script and the patch for
     # 2.6.4 touches configure
     depends_on('m4',       type='build')
-    depends_on('autoconf', type='build', when='@:2.6.0,2.6.4')
-    depends_on('automake', type='build', when='@:2.6.0,2.6.4')
-    depends_on('libtool',  type='build', when='@:2.6.0,2.6.4')
+    depends_on('autoconf', type='build', when='@:2.6.0,2.6.4:')
+    depends_on('automake', type='build', when='@:2.6.0,2.6.4:')
+    depends_on('libtool',  type='build', when='@:2.6.0,2.6.4:')
 
     # 2.6.4 fails to compile with newer versions of gcc/glibc, see:
     # - https://github.com/spack/spack/issues/8152
