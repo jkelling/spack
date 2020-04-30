@@ -16,6 +16,6 @@ class Phreeqc(CMakePackage):
     """
 
     homepage = 'https://www.usgs.gov/software/phreeqc-version-3'
-    url      = 'http://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.5.0-14000.tar.gz'
+    url      = 'http://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.6.2-15100.tar.gz'
 
-    version('3.5.0-14000', '0e77b2538d61df00212b9f648aae9c75')
+    version('3.6.2-15100', 'e820ea246adaa9ad23842d3470c5dde1')
